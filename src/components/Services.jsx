@@ -78,35 +78,35 @@ const Services = () => {
       ref={containerRef}
       className="bg-white pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]"
     >
-      <div className="max-w-6xl mx-auto relative md:h-[1350px]">
+      <div className="max-w-6xl mx-auto relative lg:h-[1450px] h-auto">
         
         {/* Header Content */}
-        <div data-aos="fade-up" className="md:absolute top-10 left-0 md:w-[450px] z-20 mb-16 md:mb-0">
+        <div data-aos="fade-up" className="lg:absolute top-10 left-0 lg:w-[500px] xl:w-[550px] z-20 mb-16 lg:mb-0">
           <div className="inline-block border border-gray-300 rounded-full px-5 py-1.5 text-sm text-gray-600 font-bold mb-8 shadow-sm bg-white">
             {skillsContent.badge}
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] mb-6 tracking-tight relative">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-[1.15] mb-8 tracking-tight relative">
             {skillsContent.heading}
             {/* Hand-drawn arrow */}
-            <svg className="absolute -bottom-10 right-10 w-12 h-12 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="absolute -bottom-8 right-6 w-10 h-10 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" className="hidden" />
               <path d="M4 4 Q 10 10 15 15 M 15 15 L 10 15 M 15 15 L 15 10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </h2>
-          <p className="text-gray-500 text-base md:text-lg max-w-sm font-medium leading-relaxed">
+          <p className="text-gray-500 text-base md:text-lg max-w-md font-medium leading-relaxed">
             {skillsContent.description}
           </p>
         </div>
 
         {/* Desktop SVG Animated Dashed Line */}
         <svg 
-          className="hidden md:block absolute top-0 left-0 w-full h-[1350px] pointer-events-none z-0" 
-          viewBox="0 0 1000 1350" 
+          className="hidden lg:block absolute top-0 left-0 w-full h-[1450px] pointer-events-none z-0" 
+          viewBox="0 0 1000 1450" 
           preserveAspectRatio="none"
         >
           {/* Faint background path (optional guide) */}
           <path 
-            d="M 650,200 C 400,300 200,400 300,600 C 400,800 750,750 700,950 C 650,1150 400,1150 300,1200" 
+            d="M 650,200 C 400,320 200,450 300,640 C 400,800 750,750 700,940 C 650,1190 400,1190 300,1260" 
             fill="none" 
             stroke="#cbd5e1" 
             strokeWidth="2" 
@@ -116,7 +116,7 @@ const Services = () => {
           {/* Mask to reveal the dashed path based on scroll */}
           <mask id="path-mask">
             <motion.path 
-              d="M 650,200 C 400,300 200,400 300,600 C 400,800 750,750 700,950 C 650,1150 400,1150 300,1200" 
+              d="M 650,200 C 400,320 200,450 300,640 C 400,800 750,750 700,940 C 650,1190 400,1190 300,1260" 
               fill="none" 
               stroke="white" 
               strokeWidth="20" 
@@ -126,7 +126,7 @@ const Services = () => {
 
           {/* The actual dashed line that gets revealed */}
           <path 
-            d="M 650,200 C 400,300 200,400 300,600 C 400,800 750,750 700,950 C 650,1150 400,1150 300,1200" 
+            d="M 650,200 C 400,320 200,450 300,640 C 400,800 750,750 700,940 C 650,1190 400,1190 300,1260" 
             fill="none" 
             stroke="black" 
             strokeWidth="2" 
@@ -138,7 +138,7 @@ const Services = () => {
 
         {/* Mobile Animated Vertical Dashed Line */}
         <svg 
-          className="md:hidden absolute top-0 left-[50%] -translate-x-1/2 w-4 h-[100%] pointer-events-none z-0" 
+          className="lg:hidden absolute top-0 left-[50%] -translate-x-1/2 w-4 h-[100%] pointer-events-none z-0" 
           viewBox="0 0 4 100" 
           preserveAspectRatio="none"
         >
@@ -172,14 +172,14 @@ const Services = () => {
         </svg>
 
         {/* Cards Container */}
-        <div className="flex flex-col gap-8 md:gap-12 items-center md:block relative z-10 w-full pt-4 md:pt-0 pb-12 md:pb-0">
+        <div className="flex flex-col gap-8 lg:gap-12 items-center lg:block relative z-10 w-full pt-4 lg:pt-0 pb-12 lg:pb-0">
           
           {skillsContent.cards.map((card, index) => {
             const positions = [
-              "md:absolute md:top-[10px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-6",
-              "md:absolute md:top-[450px] md:left-[5%] lg:left-[10%] -rotate-2 md:-rotate-6",
-              "md:absolute md:top-[700px] md:right-[5%] lg:right-[15%] rotate-1 md:rotate-3",
-              "md:absolute md:top-[1050px] md:left-[15%] lg:left-[25%] -rotate-1 md:-rotate-3",
+              "lg:absolute lg:top-[10px] lg:right-[5%] xl:right-[10%] rotate-2 lg:rotate-6",
+              "lg:absolute lg:top-[500px] lg:left-[5%] xl:left-[10%] -rotate-2 lg:-rotate-6",
+              "lg:absolute lg:top-[800px] lg:right-[5%] xl:right-[15%] rotate-1 lg:rotate-3",
+              "lg:absolute lg:top-[1120px] lg:left-[15%] xl:left-[25%] -rotate-1 lg:-rotate-3",
             ];
             const aosTypes = ["fade-left", "fade-right", "fade-left", "fade-right"];
             const aosDelays = ["100", "200", "300", "400"];
@@ -203,7 +203,7 @@ const Services = () => {
           <div 
             data-aos="fade-in" 
             data-aos-delay="600"
-            className="hidden md:block absolute top-[1250px] left-[60%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
+            className="hidden lg:block absolute top-[1330px] left-[60%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
           >
             {skillsContent.endText}
           </div>
