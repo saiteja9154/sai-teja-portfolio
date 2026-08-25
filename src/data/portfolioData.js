@@ -255,11 +255,6 @@ export const certificates = {
       issuer: "Tata / Forage",
       icon: "💼",
     },
-    {
-      name: "IR4.0 Technologies Certification",
-      issuer: "Microsoft & SAP",
-      icon: "🤖",
-    },
   ],
   viewAllUrl:
     "https://github.com/saiteja9154",
