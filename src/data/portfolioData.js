@@ -90,7 +90,7 @@ export const technicalSkills = {
       title: "Data Analysis & Libraries",
       skills: [
         { name: "Pandas", level: 88 },
-        { name: "NumPy", level: 85 },
+        { name: "NumPy & Matplotlib", level: 85 },
         { name: "Data Cleaning & Preprocessing", level: 92 }
       ]
     },
@@ -115,8 +115,8 @@ export const technicalSkills = {
       title: "Tools & Core Concepts",
       skills: [
         { name: "Git & GitHub", level: 88 },
-        { name: "Object-Oriented Programming (OOP)", level: 86 },
-        { name: "Database Management & Modeling", level: 88 }
+        { name: "Data Science & AI/ML", level: 85 },
+        { name: "Program Creation & OOP", level: 86 }
       ]
     }
   ]
@@ -132,11 +132,16 @@ export const internshipsList = [
     tech: ["Python", "SQL", "Dashboard Tools", "Excel", "Git"]
   },
   {
-    organization: "Google for Developers & AICTE",
-    role: "AI/ML Developer Virtual Intern",
-    duration: "10-Week Program",
-    skills: ["Python ML Algorithms & ML Workflows", "Exploratory Data Analysis (EDA)", "Code Documentation", "Collaborative Version Control", "Iterative Feature Development"],
-    tech: ["Python", "Machine Learning Workflows", "Git/GitHub", "EDA", "Data Processing"]
+    organization: "AICTE EduSkills",
+    role: "AI/ML Virtual Intern",
+    duration: "July 2025 – Sept 2025 (3 months)",
+    skills: [
+      "Completed a 10-week AI/ML Virtual Internship supported by Google for Developers and AICTE EduSkills.",
+      "Worked on Artificial Intelligence and Machine Learning concepts.",
+      "Gained hands-on experience in Python programming and exploratory data analysis (EDA).",
+      "Developed real-world project solutions and structured code documentation."
+    ],
+    tech: ["Python", "AI/ML Concepts", "Data Analysis", "Google for Developers", "Git/GitHub"]
   }
 ];
 
@@ -212,6 +217,20 @@ export const projects = [
     },
     isFlagship: false,
   },
+  {
+    id: "hireflow-job-portal",
+    number: "05",
+    badge: "🚀 Full-Stack App",
+    title: "HireFlow: Full-Stack Job Portal",
+    description:
+      "Designed and developed a modern recruitment platform enabling candidates to search jobs, upload PDF resumes, and track applications, while providing recruiters an administrative workspace to publish job openings and manage applicant review pipelines.",
+    techTags: ["React.js", "FastAPI", "MySQL", "Tailwind CSS", "REST APIs", "JWT Auth"],
+    links: {
+      github: "https://github.com/saiteja9154/Hireflow-Job-Portal",
+      demo: null,
+    },
+    isFlagship: false,
+  },
 ];
 
 export const certificates = {
@@ -230,6 +249,16 @@ export const certificates = {
       name: "Google Data Analytics Certification",
       issuer: "Coursera",
       icon: "📊",
+    },
+    {
+      name: "Tata Forage Virtual Experience Program",
+      issuer: "Tata / Forage",
+      icon: "💼",
+    },
+    {
+      name: "IR4.0 Technologies Certification",
+      issuer: "Microsoft & SAP",
+      icon: "🤖",
     },
   ],
   viewAllUrl:
