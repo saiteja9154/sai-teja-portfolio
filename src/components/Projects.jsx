@@ -13,112 +13,188 @@ const ExternalLinkIcon = () => (
   </svg>
 );
 
-const ProjectCard = ({ project, aosDelay }) => (
-  <div 
-    data-aos="fade-up"
-    data-aos-delay={aosDelay}
-    className={`relative rounded-2xl p-[1px] group transition-all duration-500 ${
-      project.isFlagship 
-        ? 'bg-gradient-to-br from-red-500/50 via-white/10 to-red-500/30 hover:from-red-500 hover:via-red-400/30 hover:to-red-500/60' 
-        : 'bg-white/10 hover:bg-white/20'
-    }`}
-  >
-    <div className={`rounded-2xl p-6 md:p-8 h-full backdrop-blur-md transition-all duration-500 ${
-      project.isFlagship 
-        ? 'bg-[#0f0f0f]/95 group-hover:bg-[#0f0f0f]/90' 
-        : 'bg-[#111111]/90 group-hover:bg-[#111111]/80'
-    }`}>
-      {/* Badge */}
-      {project.badge && (
-        <span className="inline-block text-xs font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20 mb-4">
-          {project.badge}
-        </span>
-      )}
+const ActionButtons = ({ project }) => (
+  <div className="flex flex-wrap gap-2.5 items-center">
+    {/* GitHub */}
+    {project.links.github && (
+      <a 
+        href={project.links.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-xs md:text-sm font-semibold hover:bg-white hover:text-black hover:border-white transition-all duration-300 shadow-sm"
+      >
+        <GitHubIcon />
+        GitHub
+      </a>
+    )}
 
-      {/* Number + Title */}
-      <div className="flex items-baseline gap-4 mb-4">
-        <span className="text-5xl font-black text-white/10 font-serif italic">{project.number}</span>
-        <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">{project.title}</h3>
-      </div>
+    {/* Live Demo (single) */}
+    {project.links.demo !== undefined && (
+      <a 
+        href={project.links.demo || '#'}
+        target={project.links.demo ? "_blank" : undefined}
+        rel={project.links.demo ? "noopener noreferrer" : undefined}
+        className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 ${
+          project.links.demo 
+            ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)]' 
+            : 'bg-white/5 text-white/40 border border-white/10 cursor-not-allowed'
+        }`}
+      >
+        <ExternalLinkIcon />
+        {project.links.demo ? 'Live Demo' : 'Demo Coming Soon'}
+      </a>
+    )}
 
-      {/* Description */}
-      <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6 max-w-2xl font-medium">
-        {project.description}
-      </p>
+    {/* Frontend Demo */}
+    {project.links.frontendDemo && (
+      <a 
+        href={project.links.frontendDemo}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white text-xs md:text-sm font-semibold hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)] transition-all duration-300"
+      >
+        <ExternalLinkIcon />
+        Frontend Demo
+      </a>
+    )}
 
-      {/* Tech Tags */}
-      <div className="flex flex-wrap gap-2 mb-8">
-        {project.techTags.map((tag) => (
-          <span 
-            key={tag}
-            className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      {/* Action Buttons */}
-      <div className="flex flex-wrap gap-3">
-        {/* GitHub */}
-        {project.links.github && (
-          <a 
-            href={project.links.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white hover:text-black transition-all duration-300 group/btn"
-          >
-            <GitHubIcon />
-            GitHub
-          </a>
-        )}
-
-        {/* Live Demo (single) */}
-        {project.links.demo !== undefined && (
-          <a 
-            href={project.links.demo || '#'}
-            target={project.links.demo ? "_blank" : undefined}
-            rel={project.links.demo ? "noopener noreferrer" : undefined}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-              project.links.demo 
-                ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)]' 
-                : 'bg-white/5 text-white/40 border border-white/10 cursor-not-allowed'
-            }`}
-          >
-            <ExternalLinkIcon />
-            {project.links.demo ? 'Live Demo' : 'Demo Coming Soon'}
-          </a>
-        )}
-
-        {/* Frontend Demo (Karigar) */}
-        {project.links.frontendDemo && (
-          <a 
-            href={project.links.frontendDemo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white text-sm font-semibold hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)] transition-all duration-300"
-          >
-            <ExternalLinkIcon />
-            Frontend Demo
-          </a>
-        )}
-
-        {/* Backend API (Karigar) */}
-        {project.links.backendApi && (
-          <a 
-            href={project.links.backendApi}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white/20 transition-all duration-300"
-          >
-            <ExternalLinkIcon />
-            Backend API
-          </a>
-        )}
-      </div>
-    </div>
+    {/* Backend API */}
+    {project.links.backendApi && (
+      <a 
+        href={project.links.backendApi}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-xs md:text-sm font-semibold hover:bg-white/20 transition-all duration-300"
+      >
+        <ExternalLinkIcon />
+        Backend API
+      </a>
+    )}
   </div>
 );
+
+const ProjectCard = ({ project, aosDelay }) => {
+  if (project.isFlagship) {
+    return (
+      <div 
+        data-aos="fade-up"
+        data-aos-delay={aosDelay}
+        className="md:col-span-2 relative rounded-2xl p-[1px] group transition-all duration-500 bg-gradient-to-br from-red-500/60 via-red-500/20 to-white/10 hover:from-red-500 hover:via-red-400/40 hover:to-red-500/60 hover:shadow-[0_20px_50px_rgba(255,42,42,0.15)]"
+      >
+        <div className="rounded-2xl p-6 md:p-8 lg:p-10 h-full backdrop-blur-md bg-[#0f0f0f]/95 group-hover:bg-[#0f0f0f]/90 transition-all duration-500 flex flex-col justify-between">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+            {/* Left Col: Info */}
+            <div className="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                {/* Badge */}
+                {project.badge && (
+                  <span className="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3.5 py-1 rounded-full border border-red-500/30 mb-4">
+                    {project.badge}
+                  </span>
+                )}
+
+                {/* Number + Title */}
+                <div className="flex items-baseline gap-4 mb-4">
+                  <span className="text-4xl md:text-5xl font-black text-red-500/30 font-serif italic">{project.number}</span>
+                  <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight leading-tight">{project.title}</h3>
+                </div>
+
+                {/* Description */}
+                <p className="text-white/70 text-sm md:text-base leading-relaxed mb-6 font-medium">
+                  {project.description}
+                </p>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="pt-2">
+                <ActionButtons project={project} />
+              </div>
+            </div>
+
+            {/* Right Col: Stack & Highlights Panel */}
+            <div className="lg:col-span-5 bg-white/[0.03] border border-white/10 rounded-xl p-5 md:p-6 flex flex-col justify-between h-full backdrop-blur-sm group-hover:border-red-500/20 transition-all duration-500">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-widest text-white/40 block mb-3">
+                  Technologies Used
+                </span>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.techTags.map((tag) => (
+                    <span 
+                      key={tag}
+                      className="px-3 py-1 text-xs font-semibold text-white/80 bg-white/5 rounded-lg border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-white/10">
+                <div className="flex items-center justify-between text-xs text-white/50 font-medium">
+                  <span>Architecture</span>
+                  <span className="text-white/80 font-semibold">Full Stack / REST API</span>
+                </div>
+                <div className="flex items-center justify-between text-xs text-white/50 font-medium mt-2">
+                  <span>Database</span>
+                  <span className="text-white/80 font-semibold">SQLite / Relational</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div 
+      data-aos="fade-up"
+      data-aos-delay={aosDelay}
+      className="md:col-span-1 relative rounded-2xl p-[1px] group transition-all duration-500 bg-white/10 hover:bg-gradient-to-br hover:from-red-500/40 hover:via-white/20 hover:to-white/5 hover:shadow-[0_15px_40px_rgba(255,42,42,0.1)] flex flex-col"
+    >
+      <div className="rounded-2xl p-6 md:p-7 h-full backdrop-blur-md bg-[#111111]/90 group-hover:bg-[#111111]/80 transition-all duration-500 flex flex-col justify-between">
+        <div>
+          {/* Badge */}
+          {project.badge ? (
+            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3 py-0.5 rounded-full border border-red-500/20 mb-3">
+              {project.badge}
+            </span>
+          ) : (
+            <div className="h-2" />
+          )}
+
+          {/* Number + Title */}
+          <div className="flex items-baseline gap-3 mb-3">
+            <span className="text-3xl md:text-4xl font-black text-white/15 font-serif italic">{project.number}</span>
+            <h3 className="text-xl md:text-2xl font-black text-white tracking-tight leading-snug">{project.title}</h3>
+          </div>
+
+          {/* Description */}
+          <p className="text-white/60 text-sm leading-relaxed mb-5 font-medium">
+            {project.description}
+          </p>
+
+          {/* Tech Tags */}
+          <div className="flex flex-wrap gap-1.5 mb-6">
+            {project.techTags.map((tag) => (
+              <span 
+                key={tag}
+                className="px-2.5 py-0.5 text-xs font-semibold text-white/70 bg-white/5 rounded-md border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="pt-4 border-t border-white/5 mt-auto">
+          <ActionButtons project={project} />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Projects = () => {
   return (
@@ -126,11 +202,11 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         
         {/* Header */}
-        <div data-aos="fade-up" className="mb-16 md:mb-20">
-          <div className="inline-block border border-white/20 rounded-full px-5 py-1.5 text-sm text-white/60 font-bold mb-8 shadow-sm bg-white/5 backdrop-blur-sm">
+        <div data-aos="fade-up" className="mb-14 md:mb-16">
+          <div className="inline-block border border-white/20 rounded-full px-5 py-1.5 text-sm text-white/60 font-bold mb-6 shadow-sm bg-white/5 backdrop-blur-sm">
             Featured Projects
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-5 tracking-tight">
             Work that speaks <br className="hidden md:block" />for itself
           </h2>
           <p className="text-white/50 text-base md:text-lg max-w-lg font-medium leading-relaxed">
@@ -138,8 +214,8 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Project Cards */}
-        <div className="flex flex-col gap-6 md:gap-8">
+        {/* Project Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <ProjectCard 
               key={project.id} 
@@ -155,7 +231,7 @@ const Projects = () => {
             href={socialLinks.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-8 py-4 rounded-full border border-white/20 text-white font-bold text-lg hover:bg-white hover:text-black hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] transition-all duration-500 group"
+            className="flex items-center gap-3 px-8 py-4 rounded-full border border-white/20 text-white font-bold text-base md:text-lg hover:bg-white hover:text-black hover:shadow-[0_0_30px_rgba(255,255,255,0.15)] transition-all duration-500 group"
           >
             <GitHubIcon />
             Explore All My Repositories
@@ -170,3 +246,4 @@ const Projects = () => {
 };
 
 export default Projects;
+

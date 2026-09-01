@@ -178,7 +178,7 @@ export const projects = [
   {
     id: "ai-sql-query-generator",
     number: "02",
-    badge: null,
+    badge: "⚡ AI & Database Automation",
     title: "AI SQL Query Generator",
     description:
       "Developed an AI-assisted SQL query generation system to translate user inputs into structured queries for analytics operations. Streamlined automation workflows by building input-parsing logic in Python that maps plain English requirements into nested, multi-table database queries.",
@@ -192,8 +192,8 @@ export const projects = [
   {
     id: "sql-sense-ai",
     number: "03",
-    badge: null,
-    title: "SQL Sense AI: Interactive SQL Learning Assistant",
+    badge: "🧠 AI Learning Assistant",
+    title: "SQL Sense AI: SQL Learning Assistant",
     description:
       "Created an interactive developer assistant tool that parses database schemas and breaks down query execution logic for learners. Implemented schema-parsing scripts in Python to convert relational data structures into step-by-step execution guidance.",
     techTags: ["Python", "SQL", "REST APIs", "AI Assistant", "Git"],
@@ -206,7 +206,7 @@ export const projects = [
   {
     id: "sql-sales-analytics-engine",
     number: "04",
-    badge: null,
+    badge: "📊 Data Analytics & BI",
     title: "SQL Sales Analytics Engine & Dashboard",
     description:
       "Wrote SQL queries to extract, clean, and organize transactional sales data across regional hubs and product lines. Applied aggregation queries and CTEs to calculate growth metrics, feeding structured data directly into Power BI dashboards.",
