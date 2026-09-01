@@ -1,13 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import heroVideo from '../assets/hero/sai-teja-hero.mp4';
+import heroVideo from '../assets/hero/portfolio-hero.mp4';
 import { heroContent, socialLinks } from '../data/portfolioData';
 
 const Hero = () => {
+  const sectionRef = useRef(null);
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const isMuted = false;
 
   useEffect(() => {
     AOS.init({
@@ -15,28 +15,73 @@ const Hero = () => {
       once: true,
       easing: 'ease-out'
     });
-    // Video does NOT autoplay anymore
+
+    // IntersectionObserver to stop video and audio when scrolled away
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting || entry.intersectionRatio < 0.3) {
+            if (videoRef.current && !videoRef.current.paused) {
+              videoRef.current.pause();
+            }
+          }
+        });
+      },
+      { threshold: [0, 0.15, 0.3, 0.6, 1.0] }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    // Scroll listener fallback to instantly pause when scrolling down to next section
+    const handleScroll = () => {
+      if (sectionRef.current && videoRef.current && !videoRef.current.paused) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        if (rect.bottom <= window.innerHeight * 0.4) {
+          videoRef.current.pause();
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Pause if user switches tabs
+    const handleVisibilityChange = () => {
+      if (document.hidden && videoRef.current && !videoRef.current.paused) {
+        videoRef.current.pause();
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   }, []);
 
   const toggleVideo = (e) => {
     e.stopPropagation();
     if (videoRef.current) {
       if (videoRef.current.paused) {
-        videoRef.current.play();
-        setIsPlaying(true);
+        videoRef.current.muted = false;
+        videoRef.current.play().catch((err) => {
+          console.warn("Video playback was prevented:", err);
+        });
       } else {
         videoRef.current.pause();
-        setIsPlaying(false);
       }
     }
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-black">
+    <section ref={sectionRef} className="relative w-full h-screen overflow-hidden bg-black">
       <video
         ref={videoRef}
-        muted={isMuted}
         playsInline
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
         onEnded={() => setIsPlaying(false)}
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
@@ -164,7 +209,7 @@ const Hero = () => {
           onClick={toggleVideo}
         >
           <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border border-white/30 bg-black/20 backdrop-blur-md flex justify-center items-center group-hover:scale-110 group-hover:bg-[#ff2a2a] transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_40px_rgba(255,42,42,0.6)]">
-            {!isPlaying || isMuted ? (
+            {!isPlaying ? (
               // Play Icon
               <svg className="w-5 h-5 md:w-8 md:h-8 text-white ml-0.5 md:ml-1" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
@@ -177,7 +222,7 @@ const Hero = () => {
             )}
           </div>
           <span className="text-white text-[10px] md:text-xs font-bold tracking-widest uppercase opacity-70 group-hover:opacity-100 transition-opacity">
-            {!isPlaying || isMuted ? "Play Reel" : "Pause"}
+            {!isPlaying ? "Play Reel" : "Pause"}
           </span>
         </div>
       </div>
