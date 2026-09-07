@@ -50,7 +50,7 @@ The application combines cutting-edge web design aesthetics (glassmorphism, dark
 - **🎨 Modern Dark & Crimson Theme**: Curated dark UI with high-contrast crimson accents, glassmorphic card overlays, and subtle ambient glows.
 - **📜 Interactive Scroll-Linked Process**: Framer Motion powered SVG line drawing animation that activates engineering milestone cards as the user scrolls.
 - **📱 Responsive Projects Grid**: Optimized multi-column layout featuring a dedicated hero spotlight for flagship systems and balanced cards for full-stack projects.
-- **📊 Interactive Skill Gauges**: Animated progress indicators categorizing Frontend, Backend, Database, Tools, and AI Integration.
+- **📊 Interactive Skill Gauges**: Animated progress indicators categorizing Frontend, Backend, Database, and Tools.
 - **📨 Live Email Dispatch**: Functional contact form powered by `@emailjs/browser` with real-time feedback and validation.
 - **🏆 Certificates & Internships Showcase**: Dedicated sections highlighting certifications (AWS, Google, EduSkills) and practical engineering internships.
 - **🔄 Centralized Data Architecture**: Modular data configuration (`src/data/portfolioData.js`) allowing content updates without touching JSX structures.

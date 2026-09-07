@@ -105,6 +105,7 @@ export const technicalSkills = {
       skills: [
         { name: "MySQL", level: 90 },
         { name: "MongoDB", level: 86 },
+        { name: "PostgreSQL", level: 88 },
       ],
     },
     {
@@ -115,16 +116,6 @@ export const technicalSkills = {
         { name: "VS Code", level: 92 },
         { name: "Postman", level: 88 },
         { name: "Docker", level: 82 },
-      ],
-    },
-    {
-      title: "AI Integration",
-      skills: [
-        { name: "Google Gemini API", level: 88 },
-        { name: "LangChain", level: 85 },
-        { name: "RAG", level: 84 },
-        { name: "ChromaDB", level: 82 },
-        { name: "LLM Integration", level: 86 },
       ],
     },
   ],
