@@ -8,7 +8,7 @@ export const personalInfo = {
   name: "Sai Teja Revuri",
   firstName: "Sai Teja",
   brandName: "Sai Teja",
-  title: "Data Analyst & Full Stack Developer",
+  title: "Full-Stack Developer",
   location: "Kakinada, India",
   phone: "+91 9154122026",
   emails: {
@@ -16,7 +16,7 @@ export const personalInfo = {
     secondary: "steja9759@gmail.com",
   },
   summary:
-    "B.Tech Computer Science and Artificial Intelligence student with hands-on experience in Python web development, REST API design, and web applications, combined with a strong focus on Data Analytics and AI-driven problem solving. Skilled in building backend services (Flask/FastAPI), responsive interfaces (React.js), and processing, modeling, and visualizing datasets (Python, SQL, Power BI, Excel, Pandas, NumPy) to optimize business decisions and automate workflows.",
+    "B.Tech Computer Science and Artificial Intelligence student with hands-on experience in full-stack web development, REST API design, and scalable application architecture. Skilled in engineering high-performance backend services (FastAPI, Python, Node.js, Express), building responsive user interfaces (React, Tailwind CSS), managing databases (MySQL, MongoDB), and integrating AI capabilities (LangChain, LLMs) to build secure, full-stack solutions.",
   resumeUrl: "/Sai_Teja_Revuri_Resume.pdf",
 };
 
@@ -28,9 +28,9 @@ export const socialLinks = {
 
 export const heroContent = {
   greeting: "Hi, I'm Sai Teja Revuri",
-  titleHighlight: "Data Analyst & Full Stack Developer",
+  titleHighlight: "Full-Stack Developer",
   subtitle:
-    "I specialize in Data Analytics, SQL, Python, Power BI, AI, Generative AI, full-stack AI applications, and backend REST APIs.",
+    "I specialize in building modern web applications, scalable backend REST APIs, responsive React interfaces, robust databases, and AI integration.",
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
@@ -41,95 +41,108 @@ export const heroContent = {
 
 export const aboutContent = {
   heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Sai Teja Revuri</span>, a B.Tech Computer Science and Artificial Intelligence student specializing in both Data Analytics and Full Stack web development. I craft backend services and interactive user interfaces while modeling and visualizing complex datasets to extract business insights.`,
-  techStack: ["Python", "SQL", "Power BI"],
+  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Sai Teja Revuri</span>, a B.Tech Computer Science and Artificial Intelligence student specializing in Full-Stack web development. I engineer robust backend services, scalable REST APIs, and responsive user interfaces, integrating modern databases, authentication, and application architecture to solve real-world problems through software.`,
+  techStack: ["Python", "FastAPI", "React"],
 };
 
 export const skillsContent = {
-  badge: "My Process",
-  heading: "Bridging the gap between software development and data insights",
+  badge: "Engineering Workflow",
+  heading: "Architecting scalable full-stack applications from concept to deployment",
   description:
-    "I follow a structured, analytical, and developer-centric workflow to build scalable backend services and visualize critical metrics.",
+    "I follow a structured, developer-centric workflow to architect full-stack applications, build secure REST APIs, and ship production-ready code.",
   cards: [
     {
       number: "01",
-      title: "Design & Model",
-      text: "Architecting structured SQLite/SQL schemas, configuring RESTful APIs, and defining data relationships.",
+      title: "Frontend Architecture",
+      text: "Crafting modular, interactive user interfaces using React and Tailwind CSS with responsive layout structures and seamless state management.",
     },
     {
       number: "02",
-      title: "Extract & Query",
-      text: "Writing complex SQL aggregate queries and CTEs to extract transactional datasets across databases.",
+      title: "Backend & REST APIs",
+      text: "Designing high-performance, modular RESTful APIs using Python, FastAPI, Node.js, and Express with robust request validation.",
     },
     {
       number: "03",
-      title: "Clean & Code",
-      text: "Utilizing Python, Pandas, and NumPy to clean raw files, handle nulls, and develop modular Flask or FastAPI backend scripts.",
+      title: "Database & Authentication",
+      text: "Structuring relational and document databases with MySQL and MongoDB, implementing JWT authentication, secure sessions, and custom middleware.",
     },
     {
       number: "04",
-      title: "Visualize & Ship",
-      text: "Designing interactive Power BI dashboards, building responsive React.js frontends, and testing APIs with Postman.",
+      title: "AI Integration & Deployment",
+      text: "Integrating Google Gemini and LangChain RAG pipelines into web applications, testing endpoints with Postman, and managing code with Git/GitHub.",
     },
   ],
-  endText: "Insights & Code Ready!",
+  endText: "Full-Stack Ready!",
 };
 
-// Technical Skills Data (Balanced Data Analyst & Full Stack Developer Stack)
+// Technical Skills Data (100% Full-Stack Developer Stack)
 export const technicalSkills = {
   categories: [
     {
-      title: "Programming Languages",
+      title: "Frontend Development",
       skills: [
-        { name: "Python", level: 90 },
-        { name: "SQL", level: 92 },
-        { name: "JavaScript", level: 80 }
-      ]
-    },
-    {
-      title: "Data Analysis & Libraries",
-      skills: [
-        { name: "Pandas", level: 88 },
-        { name: "NumPy & Matplotlib", level: 85 },
-        { name: "Data Cleaning & Preprocessing", level: 92 }
-      ]
-    },
-    {
-      title: "Visualization & Frontend",
-      skills: [
-        { name: "Power BI", level: 88 },
-        { name: "React.js", level: 85 },
+        { name: "React", level: 90 },
+        { name: "JavaScript", level: 90 },
+        { name: "HTML5", level: 95 },
+        { name: "CSS3", level: 92 },
         { name: "Tailwind CSS", level: 90 },
-        { name: "Microsoft Excel", level: 90 }
-      ]
+      ],
     },
     {
-      title: "Backend & Web APIs",
+      title: "Backend Development",
       skills: [
-        { name: "FastAPI & Flask", level: 85 },
-        { name: "REST APIs", level: 90 },
-        { name: "Postman API Testing", level: 85 }
-      ]
+        { name: "Python", level: 92 },
+        { name: "FastAPI", level: 88 },
+        { name: "Node.js", level: 85 },
+        { name: "Express.js", level: 85 },
+        { name: "REST APIs", level: 92 },
+        { name: "JWT Authentication", level: 88 },
+        { name: "Middleware", level: 86 },
+      ],
     },
     {
-      title: "Tools & Core Concepts",
+      title: "Database",
       skills: [
-        { name: "Git & GitHub", level: 88 },
-        { name: "Data Science & AI/ML", level: 85 },
-        { name: "Program Creation & OOP", level: 86 }
-      ]
-    }
-  ]
+        { name: "MySQL", level: 90 },
+        { name: "MongoDB", level: 86 },
+      ],
+    },
+    {
+      title: "Tools & Development",
+      skills: [
+        { name: "Git", level: 90 },
+        { name: "GitHub", level: 90 },
+        { name: "VS Code", level: 92 },
+        { name: "Postman", level: 88 },
+        { name: "Docker", level: 82 },
+      ],
+    },
+    {
+      title: "AI Integration",
+      skills: [
+        { name: "Google Gemini API", level: 88 },
+        { name: "LangChain", level: 85 },
+        { name: "RAG", level: 84 },
+        { name: "ChromaDB", level: 82 },
+        { name: "LLM Integration", level: 86 },
+      ],
+    },
+  ],
 };
 
 // Internships Data
 export const internshipsList = [
   {
     organization: "EduSkills Academy",
-    role: "Software & Data Development Virtual Intern",
+    role: "Software & Web Development Virtual Intern",
     duration: "8-Week Program",
-    skills: ["Data Analytics & Dashboard Workflows", "Python Scripts & SQL Modules", "Code Debugging & Modular Programming", "Data Cleaning Routines"],
-    tech: ["Python", "SQL", "Dashboard Tools", "Excel", "Git"]
+    skills: [
+      "Developed modular Python backend services and scalable REST API endpoints.",
+      "Implemented database CRUD operations, relational schema mapping, and query optimization.",
+      "Engineered request validation routines, custom middleware, and structured error handling.",
+      "Conducted end-to-end API testing using Postman and maintained clean code repositories on Git/GitHub.",
+    ],
+    tech: ["Python", "REST APIs", "Postman", "Git/GitHub", "Backend Development"],
   },
   {
     organization: "AICTE EduSkills",
@@ -137,20 +150,36 @@ export const internshipsList = [
     duration: "July 2025 – Sept 2025 (3 months)",
     skills: [
       "Completed a 10-week AI/ML Virtual Internship supported by Google for Developers and AICTE EduSkills.",
-      "Worked on Artificial Intelligence and Machine Learning concepts.",
-      "Gained hands-on experience in Python programming and exploratory data analysis (EDA).",
-      "Developed real-world project solutions and structured code documentation."
+      "Integrated machine learning logic and AI APIs into full-stack application workflows.",
+      "Gained hands-on experience in backend script automation, API routing, and data handling in Python.",
+      "Developed real-world project solutions with clean documentation and Git/GitHub version control.",
     ],
-    tech: ["Python", "AI/ML Concepts", "Data Analysis", "Google for Developers", "Git/GitHub"]
-  }
+    tech: ["Python", "AI Integration", "REST APIs", "Google for Developers", "Git/GitHub"],
+  },
 ];
 
 // Soft Skills Data
 export const softSkillsList = [
-  { name: "Problem Solving", icon: "🧩", desc: "Breaking down complex data questions and coding tasks into clean, logical, and queryable components." },
-  { name: "Data-Driven Decisions", icon: "📊", desc: "Using statistical data and model analysis rather than assumptions to recommend business solutions." },
-  { name: "Team Collaboration", icon: "🤝", desc: "Working in sync with backend developers and designers to build full-stack interfaces and visual reports." },
-  { name: "Detail-Oriented", icon: "🔍", desc: "Meticulous verification during data cleaning and API testing to prevent errors in visualizations." }
+  {
+    name: "Problem Solving",
+    icon: "🧩",
+    desc: "Breaking down complex application logic and software requirements into clean, modular, and maintainable code architecture.",
+  },
+  {
+    name: "System Architecture",
+    icon: "🏗️",
+    desc: "Designing robust application structures with clean separation of concerns, secure data flows, and scalable API endpoints.",
+  },
+  {
+    name: "Team Collaboration",
+    icon: "🤝",
+    desc: "Working in sync with frontend, backend, and design teammates through proactive communication and streamlined Git workflows.",
+  },
+  {
+    name: "Code Quality & Testing",
+    icon: "🔍",
+    desc: "Writing clean, readable code with rigorous error handling, input validation, and comprehensive Postman API testing.",
+  },
 ];
 
 export const projects = [
@@ -167,7 +196,7 @@ export const projects = [
       "Tailwind CSS",
       "REST APIs",
       "SQLite",
-      "Data Modeling"
+      "Data Modeling",
     ],
     links: {
       github: "https://github.com/saiteja9154",
@@ -176,15 +205,15 @@ export const projects = [
     isFlagship: true,
   },
   {
-    id: "ai-sql-query-generator",
+    id: "hireflow-job-portal",
     number: "02",
-    badge: "⚡ AI & Database Automation",
-    title: "AI SQL Query Generator",
+    badge: "🚀 Full-Stack App",
+    title: "HireFlow: Full-Stack Job Portal",
     description:
-      "Developed an AI-assisted SQL query generation system to translate user inputs into structured queries for analytics operations. Streamlined automation workflows by building input-parsing logic in Python that maps plain English requirements into nested, multi-table database queries.",
-    techTags: ["Python", "SQL", "REST APIs", "Automation", "AI Integration"],
+      "Designed and developed a modern recruitment platform enabling candidates to search jobs, upload PDF resumes, and track applications, while providing recruiters an administrative workspace to publish job openings and manage applicant review pipelines.",
+    techTags: ["React.js", "FastAPI", "MySQL", "Tailwind CSS", "REST APIs", "JWT Auth"],
     links: {
-      github: "https://github.com/saiteja9154",
+      github: "https://github.com/saiteja9154/Hireflow-Job-Portal",
       demo: null,
     },
     isFlagship: false,
@@ -203,34 +232,6 @@ export const projects = [
     },
     isFlagship: false,
   },
-  {
-    id: "sql-sales-analytics-engine",
-    number: "04",
-    badge: "📊 Data Analytics & BI",
-    title: "SQL Sales Analytics Engine & Dashboard",
-    description:
-      "Wrote SQL queries to extract, clean, and organize transactional sales data across regional hubs and product lines. Applied aggregation queries and CTEs to calculate growth metrics, feeding structured data directly into Power BI dashboards.",
-    techTags: ["SQL", "Power BI", "Python", "Data Modeling", "Excel"],
-    links: {
-      github: "https://github.com/saiteja9154",
-      demo: null,
-    },
-    isFlagship: false,
-  },
-  {
-    id: "hireflow-job-portal",
-    number: "05",
-    badge: "🚀 Full-Stack App",
-    title: "HireFlow: Full-Stack Job Portal",
-    description:
-      "Designed and developed a modern recruitment platform enabling candidates to search jobs, upload PDF resumes, and track applications, while providing recruiters an administrative workspace to publish job openings and manage applicant review pipelines.",
-    techTags: ["React.js", "FastAPI", "MySQL", "Tailwind CSS", "REST APIs", "JWT Auth"],
-    links: {
-      github: "https://github.com/saiteja9154/Hireflow-Job-Portal",
-      demo: null,
-    },
-    isFlagship: false,
-  },
 ];
 
 export const certificates = {
@@ -241,23 +242,22 @@ export const certificates = {
       icon: "☁️",
     },
     {
-      name: "Data Analytics with Python & Power BI",
+      name: "Full-Stack Web Development & APIs",
       issuer: "EduSkills Academy",
       icon: "🐍",
     },
     {
-      name: "Google Data Analytics Certification",
-      issuer: "Coursera",
-      icon: "📊",
+      name: "Google AI & Python Developer Certification",
+      issuer: "Coursera / Google",
+      icon: "💻",
     },
     {
-      name: "Tata Forage Virtual Experience Program",
+      name: "Tata Forage Software Engineering Program",
       issuer: "Tata / Forage",
       icon: "💼",
     },
   ],
-  viewAllUrl:
-    "https://github.com/saiteja9154",
+  viewAllUrl: "https://github.com/saiteja9154",
 };
 
 export const education = {
@@ -270,9 +270,9 @@ export const education = {
 
 export const footerContent = {
   taglines: [
-    "Data Analytics & Full Stack Web Development",
-    "Flask · FastAPI · React.js · Power BI · SQL",
-    "Scalable APIs & Data-Driven Insights",
+    "Full-Stack Web Development & Modern Architecture",
+    "React · FastAPI · Node.js · Express · MySQL · MongoDB",
+    "Scalable REST APIs & Intelligent Web Systems",
   ],
   credential: "B.Tech CS & AI · CGPA 7.9",
   copyright: `© ${new Date().getFullYear()} Sai Teja Revuri | Built with React`,

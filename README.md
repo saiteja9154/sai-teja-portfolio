@@ -1,4 +1,4 @@
-# 🚀 Sai Teja Revuri — Developer Portfolio
+# 🚀 Sai Teja Revuri — Full-Stack Developer Portfolio
 
 <div align="center">
 
@@ -8,7 +8,7 @@
   [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.x-black?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
   [![EmailJS](https://img.shields.io/badge/EmailJS-Browser-FF6C37?style=for-the-badge&logo=mailgun&logoColor=white)](https://www.emailjs.com/)
 
-  **A modern, high-performance, and visually captivating portfolio website built for a Data Analyst & Full Stack Developer.**
+  **A modern, high-performance, and visually captivating portfolio website built for a Full-Stack Developer.**
 
   [View Live Demo](https://github.com/saiteja9154/sai-teja-portfolio) · [Report Bug](https://github.com/saiteja9154/sai-teja-portfolio/issues) · [Request Feature](https://github.com/saiteja9154/sai-teja-portfolio/issues)
 
@@ -38,7 +38,7 @@
 
 ## 🌟 Overview
 
-This repository houses the source code for the personal portfolio of **Sai Teja Revuri**, specializing in **Data Analytics, Backend REST APIs, and Full-Stack Web Development**.
+This repository houses the source code for the personal portfolio of **Sai Teja Revuri**, specializing in **Full-Stack Web Development, Scalable Backend REST APIs, and Modern Application Architecture**.
 
 The application combines cutting-edge web design aesthetics (glassmorphism, dark/crimson palette, fluid micro-interactions, and animated SVG paths) with a clean, decoupled **data-driven architecture**. All text, external links, project lists, and skill configurations are centralized in a single state file for easy maintenance and scaling.
 
@@ -48,9 +48,9 @@ The application combines cutting-edge web design aesthetics (glassmorphism, dark
 
 - **⚡ Lightning-Fast Performance**: Powered by Vite 8 with Hot Module Replacement (HMR) and optimized bundle splitting.
 - **🎨 Modern Dark & Crimson Theme**: Curated dark UI with high-contrast crimson accents, glassmorphic card overlays, and subtle ambient glows.
-- **📜 Interactive Scroll-Linked Process**: Framer Motion powered SVG line drawing animation that activates process milestone cards as the user scrolls.
-- **📱 Responsive Projects Grid**: Optimized multi-column layout featuring a dedicated hero spotlight for flagship systems and balanced cards for full-stack and analytics projects.
-- **📊 Interactive Skill Gauges**: Animated progress indicators categorizing programming languages, data science libraries, frontend frameworks, and cloud tools.
+- **📜 Interactive Scroll-Linked Process**: Framer Motion powered SVG line drawing animation that activates engineering milestone cards as the user scrolls.
+- **📱 Responsive Projects Grid**: Optimized multi-column layout featuring a dedicated hero spotlight for flagship systems and balanced cards for full-stack projects.
+- **📊 Interactive Skill Gauges**: Animated progress indicators categorizing Frontend, Backend, Database, Tools, and AI Integration.
 - **📨 Live Email Dispatch**: Functional contact form powered by `@emailjs/browser` with real-time feedback and validation.
 - **🏆 Certificates & Internships Showcase**: Dedicated sections highlighting certifications (AWS, Google, EduSkills) and practical engineering internships.
 - **🔄 Centralized Data Architecture**: Modular data configuration (`src/data/portfolioData.js`) allowing content updates without touching JSX structures.
@@ -152,10 +152,8 @@ sai-teja-portfolio/
 | # | Project | Category | Tech Stack | Highlights |
 | :-: | :--- | :--- | :--- | :--- |
 | **01** | **Clinic Patient Record System** *(Flagship)* | Full-Stack Healthcare | React, Flask, SQLite, Tailwind CSS, REST APIs | Secure patient records, prescription tracking, modular SQLite schema |
-| **02** | **AI SQL Query Generator** | AI & Database Automation | Python, SQL, REST APIs, Automation | Translates natural language queries to multi-table SQL queries |
+| **02** | **HireFlow: Full-Stack Job Portal** | Full-Stack Platform | React, FastAPI, MySQL, JWT, Tailwind CSS | Role-based recruiter/candidate portal with resume processing |
 | **03** | **SQL Sense AI** | Developer Assistant | Python, SQL, REST APIs, AI Assistant | Interactive schema parsing and step-by-step query logic execution |
-| **04** | **SQL Sales Analytics Engine** | Analytics & BI | SQL, Power BI, Python, Excel | Multi-hub data extraction, CTE aggregation, and interactive dashboards |
-| **05** | **HireFlow: Full-Stack Job Portal** | Full-Stack Platform | React, FastAPI, MySQL, JWT, Tailwind CSS | Role-based recruiter/candidate portal with resume processing |
 
 ---
 
@@ -240,7 +238,7 @@ Save the file and your portfolio updates instantly across all sections!
 ## 👨‍💻 Author & Contact
 
 **Sai Teja Revuri**
-- **Role:** Data Analyst & Full Stack Developer
+- **Role:** Full-Stack Developer
 - **Education:** B.Tech in CS & AI (CGPA 7.9), Kakinada Institute of Engineering and Technology
 - **GitHub:** [@saiteja9154](https://github.com/saiteja9154)
 - **LinkedIn:** [Sai Teja Revuri](https://linkedin.com/in/sai-teja-revuri-97b63732a)
