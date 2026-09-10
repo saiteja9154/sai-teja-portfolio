@@ -83,9 +83,6 @@ export const technicalSkills = {
       skills: [
         { name: "React", level: 90 },
         { name: "JavaScript", level: 90 },
-        { name: "HTML5", level: 95 },
-        { name: "CSS3", level: 92 },
-        { name: "Tailwind CSS", level: 90 },
       ],
     },
     {
