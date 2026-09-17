@@ -15,7 +15,19 @@ const Footer = () => {
         
         <div className="flex flex-col gap-1 md:items-center">
           <p>{footerContent.credential}</p>
-          <a href="#projects" className="underline hover:text-white transition-colors mt-1 underline-offset-4 decoration-1">View Work</a>
+          <div className="flex items-center gap-3 mt-1">
+            <a href="#projects" className="underline hover:text-white transition-colors underline-offset-4 decoration-1">View Work</a>
+            <span className="text-white/30">•</span>
+            <a 
+              href={personalInfo.resumeUrl} 
+              download="Sai_Teja_Revuri_Resume.pdf"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="underline hover:text-white transition-colors underline-offset-4 decoration-1 font-semibold"
+            >
+              Resume
+            </a>
+          </div>
         </div>
         
         <div className="flex flex-col gap-1 md:items-end">

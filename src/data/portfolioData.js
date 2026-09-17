@@ -8,7 +8,7 @@ export const personalInfo = {
   name: "Sai Teja Revuri",
   firstName: "Sai Teja",
   brandName: "Sai Teja",
-  title: "Full-Stack Developer",
+  title: "Full Stack Developer | Backend Developer | MERN Stack Developer",
   location: "Kakinada, India",
   phone: "+91 9154122026",
   emails: {
@@ -16,7 +16,7 @@ export const personalInfo = {
     secondary: "steja9759@gmail.com",
   },
   summary:
-    "B.Tech Computer Science and Artificial Intelligence student with hands-on experience in full-stack web development, REST API design, and scalable application architecture. Skilled in engineering high-performance backend services (FastAPI, Python, Node.js, Express), building responsive user interfaces (React, Tailwind CSS), managing databases (MySQL, MongoDB), and integrating AI capabilities (LangChain, LLMs) to build secure, full-stack solutions.",
+    "Python Full Stack Developer and Backend Developer with hands-on experience building REST APIs, backend services, and responsive web applications using Python (Flask, FastAPI), Node.js, Express.js, React.js, SQL, and Git/GitHub. Skilled in translating business requirements into scalable, data-driven solutions across full-stack development, database querying, and analytics dashboards. Certified in AWS Cloud Practitioner and Google Data Analytics, with a strong foundation in object-oriented programming, API integration, and automation. Seeking a Software Engineer / Python Developer role to deliver measurable technical and business impact.",
   resumeUrl: "/Sai_Teja_Revuri_Resume.pdf",
 };
 
@@ -28,9 +28,9 @@ export const socialLinks = {
 
 export const heroContent = {
   greeting: "Hi, I'm Sai Teja Revuri",
-  titleHighlight: "Full-Stack Developer",
+  titleHighlight: "Full Stack Developer",
   subtitle:
-    "I specialize in building modern web applications, scalable backend REST APIs, responsive React interfaces, robust databases, and AI integration.",
+    "Python Full Stack Developer & Backend Developer specializing in REST APIs, FastAPI, Flask, React.js, and scalable cloud solutions.",
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
@@ -41,8 +41,8 @@ export const heroContent = {
 
 export const aboutContent = {
   heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Sai Teja Revuri</span>, a B.Tech Computer Science and Artificial Intelligence student specializing in Full-Stack web development. I engineer robust backend services, scalable REST APIs, and responsive user interfaces, integrating modern databases, authentication, and application architecture to solve real-world problems through software.`,
-  techStack: ["Python", "FastAPI", "React"],
+  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Sai Teja Revuri</span>, a Full Stack Developer and Backend Developer pursuing B.Tech in Computer Science and Artificial Intelligence. I engineer high-performance REST APIs, backend services, and responsive user interfaces, translating business requirements into scalable, data-driven solutions with Python (Flask, FastAPI), Node.js, Express.js, React.js, and SQL.`,
+  techStack: ["Python", "Flask", "FastAPI", "React.js", "SQL"],
 };
 
 export const skillsContent = {
@@ -54,65 +54,73 @@ export const skillsContent = {
     {
       number: "01",
       title: "Frontend Architecture",
-      text: "Crafting modular, interactive user interfaces using React and Tailwind CSS with responsive layout structures and seamless state management.",
+      text: "Crafting modular, responsive user interfaces using React.js, Tailwind CSS, and shadcn/ui with clean state management.",
     },
     {
       number: "02",
       title: "Backend & REST APIs",
-      text: "Designing high-performance, modular RESTful APIs using Python, FastAPI, Node.js, and Express with robust request validation.",
+      text: "Designing high-performance, modular RESTful API endpoints using Python, Flask, FastAPI, Node.js, and Express.",
     },
     {
       number: "03",
-      title: "Database & Authentication",
-      text: "Structuring relational and document databases with MySQL and MongoDB, implementing JWT authentication, secure sessions, and custom middleware.",
+      title: "Database & Security",
+      text: "Structuring relational and modern databases with PostgreSQL, MySQL, and SQL, implementing secure authentication and role-based workflows.",
     },
     {
       number: "04",
-      title: "AI Integration & Deployment",
-      text: "Integrating Google Gemini and LangChain RAG pipelines into web applications, testing endpoints with Postman, and managing code with Git/GitHub.",
+      title: "Cloud & Automation",
+      text: "Deploying cloud architectures with AWS, API testing with Postman, debugging, and collaborative version control on Git/GitHub.",
     },
   ],
   endText: "Full-Stack Ready!",
 };
 
-// Technical Skills Data (100% Full-Stack Developer Stack)
+// Technical Skills Data (Aligned with Resume)
 export const technicalSkills = {
   categories: [
     {
-      title: "Frontend Development",
+      title: "Programming Languages",
       skills: [
-        { name: "React", level: 90 },
+        { name: "Python", level: 92 },
         { name: "JavaScript", level: 90 },
+        { name: "SQL", level: 88 },
       ],
     },
     {
-      title: "Backend Development",
+      title: "Frontend Development",
       skills: [
-        { name: "Python", level: 92 },
+        { name: "React.js", level: 90 },
+        { name: "shadcn/ui", level: 85 },
+        { name: "Tailwind CSS", level: 90 },
+      ],
+    },
+    {
+      title: "Backend & APIs",
+      skills: [
+        { name: "Flask", level: 90 },
         { name: "FastAPI", level: 88 },
         { name: "Node.js", level: 85 },
         { name: "Express.js", level: 85 },
-        { name: "REST APIs", level: 92 },
-        { name: "JWT Authentication", level: 88 },
-        { name: "Middleware", level: 86 },
+        { name: "REST API Design", level: 92 },
+        { name: "RESTful Web Services", level: 90 },
       ],
     },
     {
-      title: "Database",
+      title: "Tools & Platforms",
       skills: [
-        { name: "MySQL", level: 90 },
-        { name: "MongoDB", level: 86 },
-        { name: "PostgreSQL", level: 88 },
-      ],
-    },
-    {
-      title: "Tools & Development",
-      skills: [
-        { name: "Git", level: 90 },
-        { name: "GitHub", level: 90 },
+        { name: "Git & GitHub", level: 92 },
+        { name: "AWS", level: 85 },
         { name: "VS Code", level: 92 },
-        { name: "Postman", level: 88 },
-        { name: "Docker", level: 82 },
+        { name: "Postman", level: 90 },
+      ],
+    },
+    {
+      title: "Core Competencies",
+      skills: [
+        { name: "Object-Oriented Programming (OOP)", level: 92 },
+        { name: "API Integration", level: 90 },
+        { name: "Debugging & Automation", level: 88 },
+        { name: "Version Control", level: 92 },
       ],
     },
   ],
@@ -122,27 +130,23 @@ export const technicalSkills = {
 export const internshipsList = [
   {
     organization: "EduSkills Academy",
-    role: "Software & Web Development Virtual Intern",
+    role: "Software & Data Development Virtual Intern",
     duration: "8-Week Program",
     skills: [
-      "Developed modular Python backend services and scalable REST API endpoints.",
-      "Implemented database CRUD operations, relational schema mapping, and query optimization.",
-      "Engineered request validation routines, custom middleware, and structured error handling.",
-      "Conducted end-to-end API testing using Postman and maintained clean code repositories on Git/GitHub.",
+      "Developed Python scripts and SQL modules to process data and power dashboard analytical workflows, reducing manual reporting effort.",
+      "Applied code debugging, modular programming, and data cleaning routines across practical datasets, improving data accuracy for downstream analysis.",
     ],
-    tech: ["Python", "REST APIs", "Postman", "Git/GitHub", "Backend Development"],
+    tech: ["Python", "SQL", "Data Analytics", "Data Cleaning", "Dashboards"],
   },
   {
-    organization: "AICTE EduSkills",
-    role: "AI/ML Virtual Intern",
-    duration: "July 2025 – Sept 2025 (3 months)",
+    organization: "Google for Developers & AICTE EduSkills",
+    role: "AI/ML Developer Virtual Intern",
+    duration: "10-Week Program",
     skills: [
-      "Completed a 10-week AI/ML Virtual Internship supported by Google for Developers and AICTE EduSkills.",
-      "Integrated machine learning logic and AI APIs into full-stack application workflows.",
-      "Gained hands-on experience in backend script automation, API routing, and data handling in Python.",
-      "Developed real-world project solutions with clean documentation and Git/GitHub version control.",
+      "Built Python algorithms and data processing scripts to explore machine learning workflows and core software engineering concepts.",
+      "Utilized Git and GitHub for collaborative version control, code documentation, and iterative feature development across team projects.",
     ],
-    tech: ["Python", "AI Integration", "REST APIs", "Google for Developers", "Git/GitHub"],
+    tech: ["Python", "Algorithms", "Machine Learning", "Git/GitHub", "Google for Developers"],
   },
 ];
 
@@ -161,7 +165,7 @@ export const softSkillsList = [
   {
     name: "Team Collaboration",
     icon: "🤝",
-    desc: "Working in sync with frontend, backend, and design teammates through proactive communication and streamlined Git workflows.",
+    desc: "Working in sync with cross-functional teams through proactive communication and streamlined Git/GitHub workflows.",
   },
   {
     name: "Code Quality & Testing",
@@ -177,14 +181,14 @@ export const projects = [
     badge: "🚀 Flagship Project",
     title: "Clinic Patient Record System",
     description:
-      "Developed a full-stack digital web application to manage patient registration, medical history tracking, and prescription management. Architected a structured SQLite database schema and implemented secure REST API endpoints in Flask to handle data requests between a responsive React frontend and SQLite database efficiently.",
+      "Engineered a full-stack patient management system supporting 500+ patient records, streamlining registration, medical history tracking, and prescription management. Designed and implemented 10+ RESTful API endpoints in Flask, reducing frontend-backend data request latency and improving reliability of clinical workflows. Built a responsive interface with React.js and Tailwind CSS, improving workflow efficiency and reducing task completion time by 25%.",
     techTags: [
       "React.js",
       "Flask",
       "Tailwind CSS",
       "REST APIs",
-      "SQLite",
-      "Data Modeling",
+      "Python",
+      "Patient Records",
     ],
     links: {
       github: "https://github.com/saiteja9154",
@@ -196,10 +200,10 @@ export const projects = [
     id: "hireflow-job-portal",
     number: "02",
     badge: "🚀 Full-Stack App",
-    title: "HireFlow: Full-Stack Job Portal",
+    title: "HireFlow – Job Portal",
     description:
-      "Designed and developed a modern recruitment platform enabling candidates to search jobs, upload PDF resumes, and track applications, while providing recruiters an administrative workspace to publish job openings and manage applicant review pipelines.",
-    techTags: ["React.js", "FastAPI", "MySQL", "Tailwind CSS", "REST APIs", "JWT Auth"],
+      "Developed a full-stack job portal enabling candidates to search and apply for jobs while allowing recruiters to create and manage job listings, supporting 200+ active listings. Implemented secure authentication, role-based workflows, and application tracking, improving recruiter workflow efficiency by an estimated 35%. Built dynamic job filtering with FastAPI and PostgreSQL, reducing average job-search time.",
+    techTags: ["React", "FastAPI", "PostgreSQL", "Tailwind CSS", "REST APIs", "Role-Based Auth"],
     links: {
       github: "https://github.com/saiteja9154/Hireflow-Job-Portal",
       demo: null,
@@ -209,11 +213,11 @@ export const projects = [
   {
     id: "sql-sense-ai",
     number: "03",
-    badge: "🧠 AI Learning Assistant",
-    title: "SQL Sense AI: SQL Learning Assistant",
+    badge: "🧠 Interactive Tool",
+    title: "SQL Sense AI: Interactive SQL Learning Assistant",
     description:
-      "Created an interactive developer assistant tool that parses database schemas and breaks down query execution logic for learners. Implemented schema-parsing scripts in Python to convert relational data structures into step-by-step execution guidance.",
-    techTags: ["Python", "SQL", "REST APIs", "AI Assistant", "Git"],
+      "Created an interactive developer assistant that parses database schemas and breaks down query execution logic, improving learner comprehension of SQL concepts. Implemented schema-parsing scripts in Python to convert relational data structures into step-by-step execution guidance for 10+ schema types.",
+    techTags: ["Python", "SQL", "REST APIs", "Schema Parsing", "Git"],
     links: {
       github: "https://github.com/saiteja9154",
       demo: null,
@@ -226,43 +230,38 @@ export const certificates = {
   featured: [
     {
       name: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
+      issuer: "Amazon Web Services (AWS)",
       icon: "☁️",
     },
     {
-      name: "Full-Stack Web Development & APIs",
+      name: "Data Analytics with Python & Power BI",
       issuer: "EduSkills Academy",
-      icon: "🐍",
+      icon: "📊",
     },
     {
-      name: "Google AI & Python Developer Certification",
+      name: "Google Data Analytics Professional Certificate",
       issuer: "Coursera / Google",
-      icon: "💻",
-    },
-    {
-      name: "Tata Forage Software Engineering Program",
-      issuer: "Tata / Forage",
-      icon: "💼",
+      icon: "📈",
     },
   ],
   viewAllUrl: "https://github.com/saiteja9154",
 };
 
 export const education = {
-  degree: "Bachelor of Technology in CS & AI",
+  degree: "Bachelor of Technology in Computer Science and Artificial Intelligence",
   institution: "Kakinada Institute of Engineering and Technology",
-  cgpa: "7.9 CGPA",
+  cgpa: "7.5 CGPA",
   graduation: "2024 – 2027",
   twelfth: "Diploma in Mechanical Engineering – Aditya Polytechnic College (2021 – 2024) – 80%",
 };
 
 export const footerContent = {
   taglines: [
-    "Full-Stack Web Development & Modern Architecture",
-    "React · FastAPI · Node.js · Express · MySQL · MongoDB",
-    "Scalable REST APIs & Intelligent Web Systems",
+    "Full-Stack Development & REST API Architecture",
+    "Python · Flask · FastAPI · React.js · Node.js · Express · SQL",
+    "Scalable Web Services & Cloud Integration",
   ],
-  credential: "B.Tech CS & AI · CGPA 7.9",
+  credential: "B.Tech CS & AI · CGPA 7.5",
   copyright: `© ${new Date().getFullYear()} Sai Teja Revuri | Built with React`,
 };
 
@@ -273,3 +272,4 @@ export const emailjsConfig = {
   templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_EMAILJS_TEMPLATE_ID",
   publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_EMAILJS_PUBLIC_KEY",
 };
+
