@@ -36,10 +36,16 @@ const ActionButtons = ({ project }) => (
         rel={project.links.demo ? "noopener noreferrer" : undefined}
         className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 ${
           project.links.demo 
-            ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)]' 
+            ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.5)] active:scale-95' 
             : 'bg-white/5 text-white/40 border border-white/10 cursor-not-allowed'
         }`}
       >
+        {project.links.demo && (
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+          </span>
+        )}
         <ExternalLinkIcon />
         {project.links.demo ? 'Live Demo' : 'Demo Coming Soon'}
       </a>
@@ -156,7 +162,17 @@ const ProjectCard = ({ project, aosDelay }) => {
         <div>
           {/* Badge */}
           {project.badge ? (
-            <span className="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3 py-0.5 rounded-full border border-red-500/20 mb-3">
+            <span className={`inline-flex items-center gap-1.5 text-[11px] font-bold tracking-widest uppercase px-3 py-0.5 rounded-full border mb-3 ${
+              project.links.demo
+                ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30 shadow-[0_0_12px_rgba(16,185,129,0.15)]'
+                : 'text-red-400 bg-red-500/10 border-red-500/20'
+            }`}>
+              {project.links.demo && (
+                <span className="relative flex h-1.5 w-1.5 mr-0.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+                </span>
+              )}
               {project.badge}
             </span>
           ) : (
@@ -166,7 +182,20 @@ const ProjectCard = ({ project, aosDelay }) => {
           {/* Number + Title */}
           <div className="flex items-baseline gap-3 mb-3">
             <span className="text-3xl md:text-4xl font-black text-white/15 font-serif italic">{project.number}</span>
-            <h3 className="text-xl md:text-2xl font-black text-white tracking-tight leading-snug">{project.title}</h3>
+            <h3 className="text-xl md:text-2xl font-black text-white tracking-tight leading-snug">
+              {project.links.demo ? (
+                <a 
+                  href={project.links.demo} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-red-400 transition-colors"
+                >
+                  {project.title}
+                </a>
+              ) : (
+                project.title
+              )}
+            </h3>
           </div>
 
           {/* Description */}

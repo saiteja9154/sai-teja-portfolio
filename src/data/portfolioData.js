@@ -213,14 +213,14 @@ export const projects = [
   {
     id: "sql-sense-ai",
     number: "03",
-    badge: "🧠 Interactive Tool",
+    badge: "Live App · Interactive Tool",
     title: "SQL Sense AI: Interactive SQL Learning Assistant",
     description:
       "Created an interactive developer assistant that parses database schemas and breaks down query execution logic, improving learner comprehension of SQL concepts. Implemented schema-parsing scripts in Python to convert relational data structures into step-by-step execution guidance for 10+ schema types.",
     techTags: ["Python", "SQL", "REST APIs", "Schema Parsing", "Git"],
     links: {
       github: "https://github.com/saiteja9154",
-      demo: null,
+      demo: "https://sql-learning-assistant-ai.vercel.app/",
     },
     isFlagship: false,
   },

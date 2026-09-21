@@ -153,7 +153,7 @@ sai-teja-portfolio/
 | :-: | :--- | :--- | :--- | :--- |
 | **01** | **Clinic Patient Record System** *(Flagship)* | Full-Stack Healthcare | React, Flask, SQLite, Tailwind CSS, REST APIs | Secure patient records, prescription tracking, modular SQLite schema |
 | **02** | **HireFlow: Full-Stack Job Portal** | Full-Stack Platform | React, FastAPI, MySQL, JWT, Tailwind CSS | Role-based recruiter/candidate portal with resume processing |
-| **03** | **SQL Sense AI** | Developer Assistant | Python, SQL, REST APIs, AI Assistant | Interactive schema parsing and step-by-step query logic execution |
+| **03** | **[SQL Sense AI](https://sql-learning-assistant-ai.vercel.app/)** *(Live)* | Developer Assistant | Python, SQL, REST APIs, AI Assistant | Interactive schema parsing and step-by-step query logic execution ([Live Demo](https://sql-learning-assistant-ai.vercel.app/)) |
 
 ---
 
