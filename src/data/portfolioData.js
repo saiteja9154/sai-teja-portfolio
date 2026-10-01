@@ -22,6 +22,7 @@ export const personalInfo = {
 
 export const socialLinks = {
   github: "https://github.com/saiteja9154",
+  portfolioRepo: "https://github.com/saiteja9154/sai-teja-portfolio.git",
   linkedin: "https://linkedin.com/in/sai-teja-revuri-97b63732a",
   instagram: "https://github.com/saiteja9154", // Redirect to GitHub as primary link
 };
@@ -97,8 +98,8 @@ export const technicalSkills = {
     {
       title: "Backend & APIs",
       skills: [
+        { name: "FastAPI", level: 92 },
         { name: "Flask", level: 90 },
-        { name: "FastAPI", level: 88 },
         { name: "Node.js", level: 85 },
         { name: "Express.js", level: 85 },
         { name: "REST API Design", level: 92 },
@@ -117,10 +118,10 @@ export const technicalSkills = {
     {
       title: "Core Competencies",
       skills: [
+        { name: "Agent Orchestration & Workflow Automation", level: 92 },
         { name: "Object-Oriented Programming (OOP)", level: 92 },
-        { name: "API Integration", level: 90 },
-        { name: "Debugging & Automation", level: 88 },
-        { name: "Version Control", level: 92 },
+        { name: "API Integration & Testing", level: 90 },
+        { name: "Database Design & ACID Transactions", level: 90 },
       ],
     },
   ],
@@ -170,15 +171,35 @@ export const softSkillsList = [
   {
     name: "Code Quality & Testing",
     icon: "🔍",
-    desc: "Writing clean, readable code with rigorous error handling, input validation, and comprehensive Postman API testing.",
+    desc: "Writing clean, readable code with rigorous error handling, input validation, and comprehensive Postman & Pytest testing.",
   },
 ];
 
 export const projects = [
   {
-    id: "clinic-patient-record",
+    id: "pharma-nexus-v2",
     number: "01",
-    badge: "🚀 Flagship Project",
+    badge: "🚀 Full-Stack App",
+    title: "Pharma Nexus V2",
+    description:
+      "AI-powered pharmacy procurement and vendor negotiation system that automates inventory-driven restocking, vendor evaluation, constraint validation, adaptive negotiation, and purchase-order decisions.",
+    techTags: [
+      "Python",
+      "FastAPI",
+      "React",
+      "SQLite",
+      "Pydantic",
+      "Agent Orchestration",
+    ],
+    links: {
+      github: "https://github.com/saiteja9154/Pharma-Nexus",
+      demo: null,
+    },
+  },
+  {
+    id: "clinic-patient-record",
+    number: "02",
+    badge: "🚀 Full-Stack App",
     title: "Clinic Patient Record System",
     description:
       "Engineered a full-stack patient management system supporting 500+ patient records, streamlining registration, medical history tracking, and prescription management. Designed and implemented 10+ RESTful API endpoints in Flask, reducing frontend-backend data request latency and improving reliability of clinical workflows. Built a responsive interface with React.js and Tailwind CSS, improving workflow efficiency and reducing task completion time by 25%.",
@@ -194,11 +215,10 @@ export const projects = [
       github: "https://github.com/saiteja9154",
       demo: null,
     },
-    isFlagship: true,
   },
   {
     id: "hireflow-job-portal",
-    number: "02",
+    number: "03",
     badge: "🚀 Full-Stack App",
     title: "HireFlow – Job Portal",
     description:
@@ -208,11 +228,10 @@ export const projects = [
       github: "https://github.com/saiteja9154/Hireflow-Job-Portal",
       demo: null,
     },
-    isFlagship: false,
   },
   {
     id: "sql-sense-ai",
-    number: "03",
+    number: "04",
     badge: "Live App · Interactive Tool",
     title: "SQL Sense AI: Interactive SQL Learning Assistant",
     description:
@@ -222,7 +241,6 @@ export const projects = [
       github: "https://github.com/saiteja9154",
       demo: "https://sql-learning-assistant-ai.vercel.app/",
     },
-    isFlagship: false,
   },
 ];
 

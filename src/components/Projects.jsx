@@ -28,26 +28,20 @@ const ActionButtons = ({ project }) => (
       </a>
     )}
 
-    {/* Live Demo (single) */}
-    {project.links.demo !== undefined && (
+    {/* Live Demo */}
+    {project.links.demo && (
       <a 
-        href={project.links.demo || '#'}
-        target={project.links.demo ? "_blank" : undefined}
-        rel={project.links.demo ? "noopener noreferrer" : undefined}
-        className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 ${
-          project.links.demo 
-            ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.5)] active:scale-95' 
-            : 'bg-white/5 text-white/40 border border-white/10 cursor-not-allowed'
-        }`}
+        href={project.links.demo}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.5)] active:scale-95 text-xs md:text-sm font-semibold transition-all duration-300"
       >
-        {project.links.demo && (
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
-          </span>
-        )}
+        <span className="relative flex h-2 w-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+        </span>
         <ExternalLinkIcon />
-        {project.links.demo ? 'Live Demo' : 'Demo Coming Soon'}
+        Live Demo
       </a>
     )}
 
@@ -80,78 +74,6 @@ const ActionButtons = ({ project }) => (
 );
 
 const ProjectCard = ({ project, aosDelay }) => {
-  if (project.isFlagship) {
-    return (
-      <div 
-        data-aos="fade-up"
-        data-aos-delay={aosDelay}
-        className="md:col-span-2 relative rounded-2xl p-[1px] group transition-all duration-500 bg-gradient-to-br from-red-500/60 via-red-500/20 to-white/10 hover:from-red-500 hover:via-red-400/40 hover:to-red-500/60 hover:shadow-[0_20px_50px_rgba(255,42,42,0.15)]"
-      >
-        <div className="rounded-2xl p-6 md:p-8 lg:p-10 h-full backdrop-blur-md bg-[#0f0f0f]/95 group-hover:bg-[#0f0f0f]/90 transition-all duration-500 flex flex-col justify-between">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-            {/* Left Col: Info */}
-            <div className="lg:col-span-7 flex flex-col justify-between">
-              <div>
-                {/* Badge */}
-                {project.badge && (
-                  <span className="inline-flex items-center gap-1.5 text-xs font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3.5 py-1 rounded-full border border-red-500/30 mb-4">
-                    {project.badge}
-                  </span>
-                )}
-
-                {/* Number + Title */}
-                <div className="flex items-baseline gap-4 mb-4">
-                  <span className="text-4xl md:text-5xl font-black text-red-500/30 font-serif italic">{project.number}</span>
-                  <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight leading-tight">{project.title}</h3>
-                </div>
-
-                {/* Description */}
-                <p className="text-white/70 text-sm md:text-base leading-relaxed mb-6 font-medium">
-                  {project.description}
-                </p>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="pt-2">
-                <ActionButtons project={project} />
-              </div>
-            </div>
-
-            {/* Right Col: Stack & Highlights Panel */}
-            <div className="lg:col-span-5 bg-white/[0.03] border border-white/10 rounded-xl p-5 md:p-6 flex flex-col justify-between h-full backdrop-blur-sm group-hover:border-red-500/20 transition-all duration-500">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-widest text-white/40 block mb-3">
-                  Technologies Used
-                </span>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.techTags.map((tag) => (
-                    <span 
-                      key={tag}
-                      className="px-3 py-1 text-xs font-semibold text-white/80 bg-white/5 rounded-lg border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="pt-4 border-t border-white/10">
-                <div className="flex items-center justify-between text-xs text-white/50 font-medium">
-                  <span>Architecture</span>
-                  <span className="text-white/80 font-semibold">Full Stack / REST API</span>
-                </div>
-                <div className="flex items-center justify-between text-xs text-white/50 font-medium mt-2">
-                  <span>Database</span>
-                  <span className="text-white/80 font-semibold">SQLite / Relational</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div 
       data-aos="fade-up"
@@ -275,4 +197,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

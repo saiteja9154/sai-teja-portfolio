@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="flex flex-col gap-1 md:items-end">
+        <div className="flex flex-col gap-2 md:items-end">
           <a 
             href={socialLinks.github}
             target="_blank"
@@ -106,6 +106,19 @@ const Footer = () => {
           >
             Explore My GitHub
           </a>
+          {socialLinks.portfolioRepo && (
+            <a 
+              href={socialLinks.portfolioRepo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-white/70 hover:text-white transition-colors underline underline-offset-4 decoration-1 font-mono text-[10px]"
+            >
+              <span>Portfolio Repository</span>
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          )}
         </div>
       </div>
     </footer>
