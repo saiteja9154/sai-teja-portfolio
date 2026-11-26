@@ -1,34 +1,15 @@
-import React from 'react'
-import Preloader from './components/Preloader'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import TechnicalSkills from './components/TechnicalSkills'
-import Services from './components/Services'
-import Projects from './components/Projects'
-import Internships from './components/Internships'
-import Certificates from './components/Certificates'
-import SoftSkills from './components/SoftSkills'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import ChapterPlaceholder from "./components/layout/ChapterPlaceholder";
+import PageShell from "./components/layout/PageShell";
+import { chapters } from "./data/site";
 
 function App() {
   return (
-    <>
-      <Preloader />
-      <Navbar />
-      <Hero />
-      <About />
-      <TechnicalSkills />
-      <Services />
-      <Projects />
-      <Internships />
-      <Certificates />
-      <SoftSkills />
-      <Contact />
-      <Footer />
-    </>
-  )
+    <PageShell>
+      {chapters.map((chapter) => (
+        <ChapterPlaceholder key={chapter.id} chapter={chapter} />
+      ))}
+    </PageShell>
+  );
 }
 
-export default App
+export default App;
